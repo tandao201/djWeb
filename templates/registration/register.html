@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Đăng kí tài khoản{% endblock  %}
+{% block content %}
+<h1>Template</h1>
+<h1>Template</h1>
+{% endblock  %}
+{% block form %}
+    <div class="formLG">
+    <h1>Đăng kí tài khoản</h1>
+    <p>Sử dụng form sau để đăng kí:</p>
+    <form action="." method="POST">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <p><input class="ip" type="submit" value="Tạo tài khoản"></p>
+    </form>
+    </div>
+{% endblock  %}

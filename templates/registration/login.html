@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Đăng nhập{% endblock  %}
+{% block content %}
+<h1>Template</h1>
+<h1>Template</h1>
+{% endblock  %}
+
+{% block form %}
+    <div class="formLG">
+        <h6>Đăng nhập</h6>
+    {% if form.errors %}
+        <p>Tài khoản hoặc mật khẩu không đúng! Thử lại</p>
+    {% else %}
+        <p>Dùng form dưới đây để Đăng nhập hoặc <a href="{% url 'register' %}">Đăng kí ở đây</a></p>
+    {% endif %}
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="text" value="{{ next }}" />
+            <p><input type="submit" value="Đăng nhập"/></p>
+        </form>
+        <p><a href="{% url 'password_reset' %}"> Quên mật khẩu?</a></p>
+    </div>
+    </div>
+{% endblock  %}
