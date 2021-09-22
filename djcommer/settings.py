@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&mtzs(qrkza3#qxz#=2m8ue4ha_c#xqs^5^d)=j#&dxoeqx*x)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://shopdogo.herokuapp.com/']
 
 
 # Application definition
